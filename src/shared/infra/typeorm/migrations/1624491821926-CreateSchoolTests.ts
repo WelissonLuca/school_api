@@ -16,12 +16,8 @@ export class CreateSchoolTests1624491821926 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'questions_id',
+            name: 'subjects',
             type: 'varchar',
-          },
-          {
-            name: 'teacher',
-            type: 'boolean',
           },
           {
             name: 'created_at',
@@ -32,16 +28,6 @@ export class CreateSchoolTests1624491821926 implements MigrationInterface {
             name: 'updated_at',
             type: 'timestamp',
             default: 'now()',
-          },
-        ],
-        foreignKeys: [
-          {
-            name: 'FkSchoolTests',
-            referencedTableName: 'users',
-            referencedColumnNames: ['id'],
-            columnNames: ['questions_id'],
-            onDelete: 'SET NULL',
-            onUpdate: 'SET NULL',
           },
         ],
       })
