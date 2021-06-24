@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class CreateAlternatives1624499351234 implements MigrationInterface {
+export class CreateAlternatives1624506370757 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
@@ -17,7 +17,7 @@ export class CreateAlternatives1624499351234 implements MigrationInterface {
           },
           {
             name: 'question_id',
-            type: 'varchar',
+            type: 'uuid',
           },
           {
             name: 'correct',

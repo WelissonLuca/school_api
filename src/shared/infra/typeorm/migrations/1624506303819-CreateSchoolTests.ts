@@ -1,10 +1,10 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class CreateSchoolTests1624491821926 implements MigrationInterface {
+export class CreateSchoolTests1624506303819 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'questions',
+        name: 'school_tests',
         columns: [
           {
             name: 'id',
@@ -12,11 +12,11 @@ export class CreateSchoolTests1624491821926 implements MigrationInterface {
             isPrimary: true,
           },
           {
-            name: 'question',
+            name: 'title',
             type: 'varchar',
           },
           {
-            name: 'test_id',
+            name: 'subjects',
             type: 'varchar',
           },
           {
@@ -28,16 +28,6 @@ export class CreateSchoolTests1624491821926 implements MigrationInterface {
             name: 'updated_at',
             type: 'timestamp',
             default: 'now()',
-          },
-        ],
-        foreignKeys: [
-          {
-            name: 'FkQuestions',
-            referencedTableName: 'school_tests',
-            referencedColumnNames: ['id'],
-            columnNames: ['test_id'],
-            onDelete: 'SET NULL',
-            onUpdate: 'SET NULL',
           },
         ],
       })
