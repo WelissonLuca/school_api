@@ -23,8 +23,8 @@ class QuestionRepository implements IQuestionRepository {
     return result;
   }
 
-  async findAll(): Promise<Question[]> {
-    const result = await this.repository.find();
+  async findAll(data): Promise<Question[]> {
+    const result = await this.repository.find(data);
     return result;
   }
 
