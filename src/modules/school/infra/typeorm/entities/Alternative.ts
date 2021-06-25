@@ -18,7 +18,7 @@ class Alternative {
 
   @ManyToOne(() => Question)
   @JoinColumn({ name: 'question_id' })
-  question: Question;
+  questions: Question;
 
   @Column()
   alternative: string;
