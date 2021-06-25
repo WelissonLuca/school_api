@@ -21,7 +21,7 @@ class Question {
   schoolTest: SchoolTest;
 
   @Column()
-  name: string;
+  question: string;
 
   @Column()
   test_id: string;
