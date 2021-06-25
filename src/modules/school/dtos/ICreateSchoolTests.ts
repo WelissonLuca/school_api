@@ -1,5 +1,5 @@
 interface ICreateSchoolTestsDTO {
-  name: string;
+  title: string;
   subjects: string;
 }
 
