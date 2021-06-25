@@ -1,5 +1,5 @@
 interface ICreateQuestionsDTO {
-  name: string;
+  question: string;
   test_id: string;
 }
 export { ICreateQuestionsDTO };
