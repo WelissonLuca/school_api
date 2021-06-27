@@ -1,0 +1,386 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RentX Documentation",
+    "description": "This is an API Rent",
+    "version": "1.0.0",
+    "contact": {
+      "email": "jorgeluiz.b.alegretti@gmail.com"
+    }
+  },
+  "tags": [],
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Register new user",
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "example name"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "example@gmail.com"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "example password"
+                  },
+                  "teacher": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                },
+                "required": [
+                  "name",
+                  "email",
+                  "password",
+                  "teacher"
+                ]
+              }
+            }
+          },
+          "description": "New users values"
+        },
+        "responses": {}
+      },
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Search all users, only teachers can do this",
+        "description": "",
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Authenticate user",
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "example@gmail.com"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "example password"
+                  }
+                },
+                "required": [
+                  "email",
+                  "password"
+                ]
+              }
+            }
+          },
+          "description": " authenticate values"
+        },
+        "responses": {}
+      }
+    },
+    "/schoolTests": {
+      "post": {
+        "tags": [
+          "SchoolTests"
+        ],
+        "summary": "Register new school test, only teachers can do this",
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "example": "example title"
+                  },
+                  "subject": {
+                    "type": "string",
+                    "example": "example subject"
+                  }
+                },
+                "required": [
+                  "title",
+                  "subject"
+                ]
+              }
+            }
+          },
+          "description": "New schoolTests values"
+        },
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/schoolTests/": {
+      "get": {
+        "tags": [
+          "SchoolTests"
+        ],
+        "summary": "Search all school tests, only teachers can do this",
+        "description": "",
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/question": {
+      "post": {
+        "tags": [
+          "Questions"
+        ],
+        "summary": "Register new question, only teachers can do this",
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "question": {
+                    "type": "string",
+                    "example": "new question"
+                  },
+                  "test_id": {
+                    "type": "string",
+                    "example": "test_id"
+                  }
+                },
+                "required": [
+                  "question",
+                  "test_id"
+                ]
+              }
+            }
+          },
+          "description": "New questions values"
+        },
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/question/{test_id}": {
+      "get": {
+        "tags": [
+          "Questions"
+        ],
+        "summary": "Search a quiz questions by id, only teachers can do this",
+        "description": "",
+        "parameters": [
+          {
+            "name": "test_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/alternative": {
+      "post": {
+        "tags": [
+          "Alternative"
+        ],
+        "summary": "Register new alternative, only teachers can do this",
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "alternative": {
+                    "type": "string",
+                    "example": "example alternative"
+                  },
+                  "correct": {
+                    "type": "boolean",
+                    "example": true
+                  },
+                  "question_id": {
+                    "type": "string",
+                    "example": "question_id"
+                  }
+                },
+                "required": [
+                  "alternative",
+                  "correct",
+                  "question_id"
+                ]
+              }
+            }
+          },
+          "description": "New alternatives values"
+        },
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/alternatives/{question_id}": {
+      "get": {
+        "tags": [
+          "Alternative"
+        ],
+        "summary": "Search alternatives of a question by id, only teachers can do this",
+        "description": "",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "Users": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "SchoolTests": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "subjects": {
+          "type": "string"
+        }
+      }
+    },
+    "Question": {
+      "type": "object",
+      "properties": {
+        "alternative": {
+          "type": "string"
+        },
+        "correct": {
+          "type": "boolean"
+        },
+        "question_id": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Alternative": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "test_id": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3333/school"
+    }
+  ]
+}
