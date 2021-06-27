@@ -6,3 +6,4 @@ ormconfig.json
 yarn-error.log
 coverage
 dist
+yarn.lock
