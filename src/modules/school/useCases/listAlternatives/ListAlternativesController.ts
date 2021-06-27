@@ -5,11 +5,10 @@ import { ListAlternativesUseCase } from './ListAlternativesUseCase';
 
 class ListAlternativesController {
   async handle(request: Request, response: Response) {
-    const { question_id } = request.headers;
+    const { question_id } = request.params;
 
-    const alternative = question_id.toString();
     const listAlternativesUseCase = container.resolve(ListAlternativesUseCase);
-    const alternatives = await listAlternativesUseCase.execute(alternative);
+    const alternatives = await listAlternativesUseCase.execute(question_id);
 
     return response.json(alternatives);
   }

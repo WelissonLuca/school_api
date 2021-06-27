@@ -5,11 +5,10 @@ import { ListQuestionUseCase } from './ListQuestionsUseCase';
 
 class ListQuestionController {
   async handle(request: Request, response: Response) {
-    const { test_id } = request.headers;
+    const { test_id } = request.params;
 
-    const test = test_id.toString();
     const listQuestionUseCase = container.resolve(ListQuestionUseCase);
-    const questions = await listQuestionUseCase.execute(test);
+    const questions = await listQuestionUseCase.execute(test_id);
 
     return response.json(questions);
   }
