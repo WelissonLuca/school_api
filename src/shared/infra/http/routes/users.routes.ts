@@ -13,10 +13,19 @@ const createUserController = new CreateUserController();
 const authenticateUSerController = new AuthenticateUSerController();
 const listUsersController = new ListUsersController();
 
-userRouter.post('/users', createUserController.handle);
-userRouter.post('/login', authenticateUSerController.handle);
+userRouter.post(
+  '/users',
+
+  createUserController.handle
+);
+userRouter.post(
+  '/login',
+
+  authenticateUSerController.handle
+);
 userRouter.get(
   '/users',
+
   ensureAuthenticated,
   ensureTeacher,
   listUsersController.handle

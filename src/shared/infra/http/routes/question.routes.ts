@@ -19,7 +19,7 @@ QuestionRouter.post(
 );
 
 QuestionRouter.get(
-  '/question',
+  '/question/:test_id',
   ensureAuthenticated,
   ensureTeacher,
   listQuestionController.handle

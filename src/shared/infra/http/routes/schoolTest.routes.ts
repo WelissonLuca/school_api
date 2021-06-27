@@ -18,7 +18,7 @@ SchoolTestRouter.post(
 );
 
 SchoolTestRouter.get(
-  '/schoolTests',
+  '/schoolTests/',
   ensureAuthenticated,
   ensureTeacher,
   listSchoolTestsController.handle

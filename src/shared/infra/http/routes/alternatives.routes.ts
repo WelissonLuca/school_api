@@ -19,7 +19,7 @@ AlternativeRouter.post(
 );
 
 AlternativeRouter.get(
-  '/alternatives',
+  '/alternatives/:question_id',
   ensureAuthenticated,
   ensureTeacher,
   listAlternativesController.handle
