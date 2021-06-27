@@ -432,7 +432,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3333/school"
+      "url": "https://gamatestjr.herokuapp.com/school"
     }
   ]
 }
