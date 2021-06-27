@@ -376,6 +376,58 @@
         "scheme": "bearer",
         "bearerFormat": "JWT"
       }
+    },
+    "schemas": {
+      "Users": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "SchoolTests": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "subjects": {
+            "type": "string"
+          }
+        }
+      },
+      "Question": {
+        "type": "object",
+        "properties": {
+          "alternative": {
+            "type": "string"
+          },
+          "correct": {
+            "type": "boolean"
+          },
+          "question_id": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Alternative": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "test_id": {
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "servers": [
