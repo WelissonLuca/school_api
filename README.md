@@ -91,9 +91,9 @@ $ yarn dev ou npm run dev
 - <https://gamatestjr.herokuapp.com/api-docs/>
 
 ###### Links Extras
-- https://www.notion.so/Teste-GAMA-309d1eba6fe84959b3fb596642fe8978
-- https://dashboard.heroku.com/
-- https://swagger.io/
+- Notion > https://www.notion.so/Teste-GAMA-309d1eba6fe84959b3fb596642fe8978
+- Heroku > https://dashboard.heroku.com/
+- Swagger > https://swagger.io/
 - Import do insomnia > https://drive.google.com/file/d/1uYHUgFXAtIVHz66fOvPKsmr-AFEjiBww/view?usp=sharing
 <!-- LICENSE -->
 
