@@ -66,7 +66,7 @@
 
 ```bash
 # Execute este comando para clonar o projeto
-$ git clone https://github.com/WelissonLuca/test-back-end-JR
+$ git clone https://github.com/WelissonLuca/school_api
 # ou use a opção de download.
 
 # Entre na pasta com
