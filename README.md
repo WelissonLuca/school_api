@@ -88,7 +88,7 @@ $ yarn dev ou npm run dev
 
 #### Link para deploy da aplicação no heroku
 
-- <https://gamatestjr.herokuapp.com/api-docs/>
+- <https://schoolapijr.herokuapp.com/api-docs//>
 
 <!-- LICENSE -->
 
