@@ -1,4 +1,4 @@
-<h1 align="center">Gama Teste Back-End JR</h1>
+<h1 align="center">SCHOOL_API</h1>
 
 ## 📕 Índice
 
