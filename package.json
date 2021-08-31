@@ -54,7 +54,7 @@
     "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-import": "2.24.2",
     "eslint-plugin-import-helpers": "1.1.0",
-    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-prettier": "3.4.1",
     "git-commit-msg-linter": "3.2.8",
     "prettier": "2.3.2",
     "ts-node-dev": "1.1.8",
